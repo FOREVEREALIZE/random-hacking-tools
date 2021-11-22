@@ -1,1 +1,2 @@
-Invoke-WebRequest raw.githubusercontent.com/FOREVEREALIZE/random-hacking-tools/main/$Args[0]
+$WebClient = New-Object System.Net.WebClient
+$WebClient.DownloadFile(Args[0],-join("./", Args[0].Split("/")[-1]))
